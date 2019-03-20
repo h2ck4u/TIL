@@ -39,14 +39,23 @@
 var line = require('fs').readFileSync('/dev/stdin','utf8');
 var data = line.split("\n");
 var len = parseInt(data[0]);
+var countZero = 0;
+var countOne = 0;
 for (var i=0; i<len; i++) {
-    var input = data[i+1].trim().split(' ');
-    var x1 = parseInt(input[0]);
-    var y1 = parseInt(input[1]);
-    var r1 = parseInt(input[2]);
-    var x2 = parseInt(input[3]);
-    var y2 = parseInt(input[4]);
-    var r2 = parseInt(input[5]);
-  
-    console.log(count);
+    
+    var input = parseInt(data[i+1].trim());
+    fibonacci(input);
+
 }
+
+function fibonacci(n) {
+    if (n == 0) {
+        countZero ++;
+        return 0;
+    } else if (n == 1) {
+        countOne ++;
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+ }
