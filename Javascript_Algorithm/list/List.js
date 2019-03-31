@@ -16,16 +16,28 @@ class List {
         this.dataStore = [];
     }
 
-    append() {
-
+    append(element) {
+        this.dataStore[this.listSize] = element;
+        this.listSize++;
     }
 
-    remove() {
-
+    remove(element) {
+        let idx = this.find(element);
+        if ( idx > -1 ) {
+            this.dataStore.splice(idx, 1);
+            this.listSize--;
+            return true;
+        }
+        return false;
     }
 
-    find() {
-
+    find(element) {
+        for (let i = 0; i < this.listSize; i++) {
+            if (element === this.dataStore[i]) {
+                return i;
+            }
+        }
+        return -1; //없는경우
     }
 
     insert() {
