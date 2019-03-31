@@ -15,30 +15,32 @@
  * 스택(Stack)은 연결리스트 로 구현할 수 있다. 연결리스트의 같은 방향에서 아이템을 추가하고 삭제하도록 구현한다.
  */
 
- class Stack {
+class Stack {
     constructor() {
         this.dataList = [];
-        this.top = 0
-        this.pop = this.pop.bind(this);
-        this.push = this.push.bind(this);
-        this.peek = this.peek.bind(this);
-        this.isEmpty = this.isEmpty.bind(this);
-        this.length = 0;
+        this.top = -1;
+    }
+
+    push(data) {
+        this.top++;
+        this.dataList[this.top] = data;
     }
 
     pop() {
-
+        let value = null;
+        if (this.dataList.length > 0) {
+            value = this.dataList[this.top];
+            this.top--;
+        }
+        return value;
     }
 
-    push() {
-
-    }
 
     peek() {
-
+        return this.dataList[this.top];
     }
 
     isEmpty() {
-
+        return this.dataList.length === 0;
     }
- }
+}
