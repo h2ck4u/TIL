@@ -10,7 +10,7 @@ var lengthOfLongestSubstring = function (s) {
         if (index < i) {
             position = index + 1;
         }
-    max = Math.max(max, i - position + 1);
+        max = Math.max(max, i - position + 1);
     }
     return max;
 };
