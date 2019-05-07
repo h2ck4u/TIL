@@ -2,14 +2,15 @@
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function(s) {
-    let start = 0;
-    let tmpStr = '';
-    let currIdx = 0;
-    for (let i=0; i<s.length; i++) {
-		currIdx = tmpStr.indexOf(s[i]);
-		start = currIdx !== -1 ? start + currIdx + 1 : start;
-		tmpStr = s.substring(start, i+1); 
+var lengthOfLongestSubstring = function (s) {
+    let max = 0;
+    let position = 0;
+    for (let i = 0; i < s.length; i++) {
+        let index = s.indexOf(s.charAt(i), position);
+        if (index < i) {
+            position = index + 1;
+        }
+    max = Math.max(max, i - position + 1);
     }
-	return tmpStr.length;
+    return max;
 };
