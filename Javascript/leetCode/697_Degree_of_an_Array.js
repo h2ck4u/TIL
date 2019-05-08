@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findShortestSubArray = function (nums) {
+let findShortestSubArray = function (nums) {
    let len = nums.length;
    let result = len;
    let degreeMap = new Map();
