@@ -33,6 +33,7 @@ class Stack_es6 {
         if (this.dataList.length > 0) {
             value = this.dataList[this.top];
             this.top--;
+            this.dataList.pop();
         }
         return value;
     }
