@@ -73,3 +73,22 @@ function Stack_es5() {
         return items.length;
     }
 }
+
+class Stack_fn {
+    constructor() {
+        this.values = []; 
+        this.top = 0;
+    }
+        
+    push(element) {
+        this.values[this.top++] = element;
+    }
+    
+    pop() {
+        return this.values[--this.top];
+    }
+    
+    values() {
+        return this.values;
+    }
+}
