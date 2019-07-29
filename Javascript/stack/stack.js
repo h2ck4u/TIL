@@ -33,6 +33,7 @@ class Stack_es6 {
         if (this.dataList.length > 0) {
             value = this.dataList[this.top];
             this.top--;
+            this.dataList.pop();
         }
         return value;
     }
@@ -49,45 +50,45 @@ class Stack_es6 {
 function Stack_es5() {
     let items = [];
 
-    this.push = function(element) {
+    this.push = function (element) {
         items.push(element);
     }
 
-    this.pop = function() {
+    this.pop = function () {
         return items.pop();
     }
 
-    this.peek = function() {
+    this.peek = function () {
         return items.peeek(items.length - 1);
     }
 
-    this.isEmpty = function() {
+    this.isEmpty = function () {
         return items.length === 0;
     }
 
-    this.clear = function() {
+    this.clear = function () {
         items = [];
     }
 
-    this.size = function() {
+    this.size = function () {
         return items.length;
     }
 }
 
 class Stack_fn {
     constructor() {
-        this.values = []; 
+        this.values = [];
         this.top = 0;
     }
-        
+
     push(element) {
         this.values[this.top++] = element;
     }
-    
+
     pop() {
         return this.values[--this.top];
     }
-    
+
     values() {
         return this.values;
     }
