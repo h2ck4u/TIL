@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./n_1.js"></script>
+</head>
+
+<body onload="init();">
+    <div id='root'>
+
+    </div>
+</body>
+<script>
+    function init() {
+        const spinBox = new Spinbox();
+        const root = document.getElementById('root');
+        root.appendChild(spinBox.element);
+    }
+</script>
+
+</html>
