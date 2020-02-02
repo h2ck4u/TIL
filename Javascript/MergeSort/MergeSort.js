@@ -6,7 +6,6 @@ function mergeSort(arr) {
     let pivot = Math.floor(arr.length / 2);
     let left = arr.slice(0, pivot);
     let right = arr.slice(pivot, arr.length);
-    console.log(pivot, left, right);
     return merge(mergeSort(left), mergeSort(right));
 }
 

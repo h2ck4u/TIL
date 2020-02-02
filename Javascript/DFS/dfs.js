@@ -17,16 +17,16 @@ function dfs(node) {
         const root = stack.pop();
         const left = root.left;
         const right = root.right;
-
+        if (right && !right.marked) {
+            console.log(right.data);
+            stack.push(right);
+        }
         if (left && !left.marked) {
             console.log(left.data);
             stack.push(left);
         }
 
-        if (right && !right.marked) {
-            console.log(right.data);
-            stack.push(right);
-        }
+
     }
 }
 
