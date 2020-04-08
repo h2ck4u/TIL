@@ -1,0 +1,26 @@
+{
+  "name": "typescript-study",
+  "version": "1.0.0",
+  "description": "Learing Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node ./dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h2ck4u/typescript-study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h2ck4u/typescript-study/issues"
+  },
+  "homepage": "https://github.com/h2ck4u/typescript-study#readme",
+  "dependencies": {
+    "tsc-watch": "^4.2.3"
+  },
+  "devDependencies": {
+    "crypto-js": "^4.0.0",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,3 @@
+# typescript-study
+
+Learing Typescript.
