@@ -1,5 +1,3 @@
-# keep studing..
-
 ## Table Of Study
 
 - [Javascript]
