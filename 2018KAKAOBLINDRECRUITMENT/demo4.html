@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+1와 0로 채워진 표(board)가 있습니다. 표 1칸은 1 x 1 의 정사각형으로 이루어져 있습니다. 표에서 1로 이루어진 가장 큰 정사각형을 찾아 넓이를 return 하는 solution 함수를 완성해 주세요. (단, 정사각형이란 축에 평행한 정사각형을 말합니다.)
+-->
+	<title>문제3</title>
+	<script>
+		function solution(board) {
+			var answer = 0;
+			var lengthY = board.length;
+			var lengthX = board[0].length;
+			var max = 0;
+			if(lengthY < 2 || lengthY < 2) {
+				for(var i = 0 ; i < lengthY ; i++){
+					for(var j = 0;  j < lengthX ; j++) {
+						if (board[i][j] === 1) {
+							max = 1;
+						}
+					}
+				}
+			}else {
+				for(var i =1; i < lengthY; i++) {
+					for(var j=1;  j < lengthX; j++) {
+						if(board[i][j] === 1 ) {
+							board[i][j] = Math.min(board[i - 1][j], board[i][j - 1], board[i - 1][j - 1]) + 1;
+							if(board[i][j] > max) {
+								max = board[i][j];
+							}
+						}
+					}
+				}
+			}
+			return Math.pow(max, 2);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
