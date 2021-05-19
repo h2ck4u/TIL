@@ -12,7 +12,7 @@ var kthSmallest = function (matrix, k) {
     }, []).sort((a, b) => a - b)[k - 1];
 };
 const assert = require('assert');
-assert.deepEqual(kthSmallest([
+assert.deepStrictEqual(kthSmallest([
     [1, 5, 9],
     [10, 11, 13],
     [12, 13, 15]

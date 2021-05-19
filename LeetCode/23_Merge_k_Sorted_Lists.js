@@ -83,4 +83,4 @@ function printVal(node) {
     return arr;
 }
 
-assert.deepEqual(printVal(mergeKLists([node1, node4, node7])), [1, 1, 2, 3, 4, 4, 5, 6]);
+assert.deepStrictEqual(printVal(mergeKLists([node1, node4, node7])), [1, 1, 2, 3, 4, 4, 5, 6]);

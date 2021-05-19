@@ -22,4 +22,4 @@ let selfDividingNumbers = function (left, right) {
 };
 
 const assert = require('assert');
-assert.deepEqual(selfDividingNumbers(1, 22), [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]);
+assert.deepStrictEqual(selfDividingNumbers(1, 22), [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]);

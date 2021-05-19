@@ -14,4 +14,4 @@ var hammingDistance = function (x, y) {
 };
 
 const assert = require('assert');
-assert.deepEqual(hammingDistance(1, 4), 2);
+assert.deepStrictEqual(hammingDistance(1, 4), 2);

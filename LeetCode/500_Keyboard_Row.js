@@ -38,4 +38,4 @@ var findWords = function (words) {
 };
 
 const assert = require('assert');
-assert.deepEqual(findWords(["Hello", "Alaska", "Dad", "Peace"]), ["Alaska", "Dad"]);
+assert.deepStrictEqual(findWords(["Hello", "Alaska", "Dad", "Peace"]), ["Alaska", "Dad"]);
